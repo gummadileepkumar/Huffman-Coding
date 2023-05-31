@@ -21,7 +21,7 @@ Print the characters and its huffman code.
 # Developed By: Gumma Dileep Kumar
 # Register No: 212222240032
 
-# Get the input String
+### Get the input String
 ```python
 string = '212222240032 gumma dileep kumar'
 class NodeTree(object):

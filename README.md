@@ -6,29 +6,23 @@ To implement Huffman coding to compress the data using Python.
 1. Anaconda - Python 3.7
 
 ## Algorithm:
-### Step1:
+## Step1:
 Get the input string.
-
-### Step2:
+## Step2:
 Create the required tree nodes.
-
-### Step3:
+## Step3:
 Function to implement the huffman coding.
-
-### Step4:
+## Step4:
 Calculate frequency of occurence.
-
-### Step5:
+## Step5:
 Print the characters and its huffman code.
 
- 
 ## Program:
 # Developed By: Gumma Dileep Kumar
 # Register No: 212222240032
 
 # Get the input String
 ```python
-
 string = '212222240032 gumma dileep kumar'
 class NodeTree(object):
     def __init__(self, left=None, right=None): 
@@ -39,9 +33,8 @@ class NodeTree(object):
 ```
 
 
-# Create tree nodes
+### Create tree nodes
 ```python
-
 def huffman_code_tree (node, left=True, binString=''):
     if type(node) is str:
         return {node: binString}
@@ -51,7 +44,7 @@ def huffman_code_tree (node, left=True, binString=''):
     d.update(huffman_code_tree (r, False, binString + '1'))
     return d
 ```
-# Main function to implement huffman coding
+### Main function to implement huffman coding
 ```python
 freq = {}
 for c in string:
@@ -62,7 +55,7 @@ for c in string:
 freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
 nodes=freq
 ```
-# Calculate frequency of occurrence
+### Calculate frequency of occurrence
 ```python
 while len(nodes)>1:
     (key1,c1)=nodes[-1]
@@ -72,7 +65,7 @@ while len(nodes)>1:
     nodes.append((node,c1 + c2))
     nodes = sorted (nodes, key=lambda x: x[1], reverse=True)
 ```
-# Print the characters and its huffmancode
+### Print the characters and its huffmancode
 ```python
 huffmanCode=huffman_code_tree(nodes[0][0])
 print(' Char | Huffman code ') 
